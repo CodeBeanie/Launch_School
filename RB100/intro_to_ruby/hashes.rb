@@ -49,4 +49,34 @@ both_arr = h1.to_a
 
 puts both_arr
 
-# Exercise 4 : 
+# Exercise 5 : Program to check if a hash contains a specific value. 
+
+if h1.has_value?(300)
+  puts "It's here."
+else
+  puts "Not present."
+end
+
+
+# Exercise 8 : Write a program that prints out groups of words that are anagrams. Anagrams are words that have the same exact letters in them but in a different order. Your output should look something like this:
+
+words =  ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
+          'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
+          'flow', 'neon']
+
+result = {}
+
+words.each do |word|
+  key = word.split('').sort.join
+  if result.has_key?(key)
+    result[key].push(word)
+  else
+    result[key] = [word]
+  end
+end
+
+result.each_value do |v|
+  puts "------"
+  p v
+end
+
