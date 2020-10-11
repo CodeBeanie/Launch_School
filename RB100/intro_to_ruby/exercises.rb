@@ -54,3 +54,20 @@ array.uniq!
 puts array
 
 # Exercise 8 : Create a hash with one key-value pair, using both forms of the Ruby syntax. 
+
+old_hash = { :name => "Rob" } # Old version
+new_hash = { name: "Rob"} # New version
+
+puts old_hash
+puts new_hash
+
+# Exercise 9 : Get the value of key b, add {e:5} to the hash, remove all values less than 3.5.
+
+h = {a:1, b:2, c:3, d:4}
+
+h[:b]
+
+h[:e] = 5
+
+h.delete_if {|k, v| v < 3.5}
+
